@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title  >
+</head>
+<style>
+    #outer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        border: 1px solid black;
+        background-color: black;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        height: 100%;
+        width: 100%;
+        margin:-10px;
+    }
+
+    #display {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        height: 30px;
+    
+        text-align: right;
+        padding-top: 80px;
+        padding-right: 10px;
+    }
+ #displayTotal{
+     
+     grid-column-start: 1;
+     
+     grid-column-end: 5;
+     
+     text-align: right;
+     height: 70px;
+        padding-top: 50px;
+        padding-right: 10px;
+ }
+ #history{
+     text-align: left;
+     padding-left: 40px;
+     font-size: 35px;
+    grid-column-start: 1;    
+     grid-column-end: 5;
+ }
+ #extra{
+     display:none;
+    position: absolute;
+    top: 54.1%;
+        left: 33%;
+        border: 1px solid black;
+    background-color:aqua;
+    height: 303px;
+        width: 315px;
+ }
+
+    .inner,
+    .i1 {
+
+        padding-top: 10px;
+    }
+
+    .i1 {
+        background-color: rgb(29, 28, 28);
+    }
+    .i2{
+        background-color: black;
+    }
+
+   
+</style>
+
+<body>
+    <div id="outer">
+        <div id="display" style="font-size: 35px;"></div>
+        <div id="displayTotal" style="font-size: 35px;"></div>
+        <div id="history" onclick=hist()>History</div>
+        <div class="inner i1 i2" onclick=prc() style="color:yellow;">C</div>
+        <div class="inner i1 i2" onclick=prpe();>%</div>
+        <div class="inner i1 i2" onclick=change();>+/-</div>
+        <div class="inner i1" onclick=prd();>÷</div>
+        <div class="inner i2" onclick=pr7();>7</div>
+        <div class="inner i2" onclick=pr8();>8</div>
+        <div class="inner i2" onclick=pr9();>9</div>
+        <div class="inner i1" onclick=prm();>*</div>
+        <div class="inner i2"onclick=pr4();>4</div>
+        <div class="inner i2" onclick=pr5();>5</div>
+        <div class="inner i2" onclick=pr6();>6</div>
+        <div class="inner i1" onclick=prmi();>-</div>
+        <div class="inner i2 " onclick=pr1();>1</div>
+        <div class="inner i2" onclick=pr2();>2</div>
+        <div class="inner i2" onclick=pr3();>3</div>
+        <div class="inner i1 " onclick=prpi();>+</div>
+        <div class="inner i2" onclick=prdot();>. </div>
+        <div class="inner i2" onclick=pr0();>0</div>
+        <div class="inner i2" onclick=back();><</div>
+        <div class="inner i1" onclick=add();>=</div>
+        </div>
+        <div id="extra">lorem ebjeb</div>
+        <script src="index.js"></script>
+</body>
+
+</html>
